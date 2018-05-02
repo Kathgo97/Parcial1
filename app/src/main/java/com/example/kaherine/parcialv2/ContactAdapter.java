@@ -14,10 +14,10 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     Context mContext;
 
     private LayoutInflater inflater;
-    private List<ModelContact> mListContact;
+    private List<Contacto> mListContact;
 
 
-    public  ContactAdapter(Context context, List<ModelContact> listContact){
+    public  ContactAdapter(Context context, List<Contacto> listContact){
         mListContact = listContact;
         mContext = context;
 
@@ -39,8 +39,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         contact_name = holder.contact_name;
         contact_number = holder.contact_number;
 
-        contact_name.setText(mListContact.get(position).getName());
-        contact_number.setText(mListContact.get(position).getNumber());
+        contact_name.setText(mListContact.get(position).getNombre());
+        contact_number.setText(mListContact.get(position).getTelefono());
 
     }
 
@@ -55,8 +55,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         public ViewHolder(View itemView) {
             super(itemView);
 
-            contact_name = itemView.findViewById(R.id.contact_name);
-            contact_number = itemView.findViewById(R.id.contact_number);
+            contact_name = itemView.findViewById(R.id.nombre);
+            contact_number = itemView.findViewById(R.id.telefono);
         }
     }
 }

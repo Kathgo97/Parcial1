@@ -3,19 +3,20 @@ package com.example.kaherine.parcialv2;
 
 
 public class Contacto {
-    private String nombre, apellido, correo, direccion;
-    private int ide;
-    private boolean favs, completada;
+    private String nombre, telefono;
 
 
-    public  Contacto(String nombre, String apellido,String correo, String direccion, int ide, boolean completada, boolean favs) {
+
+
+    public  Contacto(String nombre, String telefono) {
         this.nombre = nombre;
-        this.apellido = apellido;
+        /*this.apellido = apellido;
         this.correo=correo;
         this.direccion= direccion;
-        this.ide=ide;
-        this.completada = completada;
-        this.favs=favs;
+        this.ide=ide;*/
+        this.telefono=telefono;
+        /*this.completada = completada;
+        this.favs=favs;*/
     }
 
     public String getNombre(){
@@ -26,7 +27,7 @@ public class Contacto {
         this.nombre = nombre;
     }
 
-    public String getApellido(){
+    /*public String getApellido(){
         return apellido;
     }
 
@@ -57,8 +58,12 @@ public class Contacto {
     public void setIde(int ide) {
         this.ide=ide;
     }
+*/
+    public String getTelefono(){ return telefono;}
 
-    public boolean isCompletada() {
+    public void setTelefono(String telefono) { this.telefono=telefono;}
+
+    /*public boolean isCompletada() {
         return completada;
     }
 
@@ -74,6 +79,7 @@ public class Contacto {
         this.favs = favs;
     }
 
+*/
 
 }
 
